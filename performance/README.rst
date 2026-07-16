@@ -81,6 +81,10 @@ List of examples that cover performance related aspect.
     - Bandwidth test of global to local memory.
     - 
 
+  * - `smartssd_compute_roofline <smartssd_compute_roofline>`_
+    - Compute-bound single-precision peak FLOP/s benchmark for a SmartSSD FPGA Roofline model.
+    -
+
   * - `p2p_fpga2fpga_bandwidth <p2p_fpga2fpga_bandwidth>`_
     - This is simple example to explain performance bandwidth for P2P transfer between two FPGA devices.
     - 
@@ -94,5 +98,3 @@ List of examples that cover performance related aspect.
       **Keywords**
 
       * `XCL_MEM_EXT_P2P_BUFFER <https://docs.xilinx.com/r/en-US/ug1393-vitis-application-acceleration/Assigning-DDR-Bank-in-Host-Code>`__
-
-
