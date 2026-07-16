@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "modules": {
+      "peak_compute": {
+      "proto_instances": {
+        "grp_peak_compute_Pipeline_load_seeds_fu_133/grp_peak_compute_Pipeline_load_seeds_fu_133": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "grp_peak_compute_Pipeline_compute_fu_147/grp_peak_compute_Pipeline_compute_fu_147": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        }
+      }
+    }
+  }
+}

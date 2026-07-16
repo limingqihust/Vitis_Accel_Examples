@@ -1,0 +1,113 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_pfm_clk_2_0/sim/pfm_dynamic_pfm_clk_2_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_pfm_clk_3_0/sim/pfm_dynamic_pfm_clk_3_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_kernel2_clk_0/sim/pfm_dynamic_kernel2_clk_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_kernel_clk_0/sim/pfm_dynamic_kernel_clk_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_smartconn_data_0_0/bd_0/sim/bd_f615.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_smartconn_data_0_0/sim/pfm_dynamic_smartconn_data_0_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_0/sim/pfm_dynamic_xlconcat_interrupt_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_0_0/sim/pfm_dynamic_xlconcat_interrupt_0_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_1_0/sim/pfm_dynamic_xlconcat_interrupt_1_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_2_0/sim/pfm_dynamic_xlconcat_interrupt_2_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_3_0/sim/pfm_dynamic_xlconcat_interrupt_3_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_1/sim/bd_4bfa.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_2/sim/bd_d216_interconnect_S00_AXI_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_2/sim/bd_27a1.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_3/sim/bd_d216_interconnect_DDR4_MEM00_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_3/sim/bd_4688.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_4/sim/bd_d216_interconnect_PLRAM_MEM00_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_4/sim/bd_065e.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_5/sim/bd_d216_ddr4_mem00_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_7/sim/bd_d216_ddr4_mem00_ctrl_cc_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_8/sim/bd_d216_calib_concat_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_9/sim/bd_d216_calib_reduce_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_10/sim/bd_d216_calib_vector_concat_0.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_11/sim/bd_d216_plram_mem00_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_12/sim/bd_d216_plram_mem00_bram_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_13/sim/bd_d216_interconnect_ddrmem_ctrl_0.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/sim/bd_d216_sci_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/sim/bd_d216.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/sim/pfm_dynamic_memory_subsystem_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_c0_sys_0/sim/pfm_dynamic_c0_sys_0.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_profile_vip_0_0/sim/pfm_dynamic_profile_vip_0_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_axi_bram_null_0_0/sim/pfm_dynamic_axi_bram_null_0_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/sim/pfm_dynamic.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute_control_s_axi.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute_fadd_32ns_32ns_32_8_no_dsp_1.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute_flow_control_loop_pipe_sequential_init.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute_fmul_32ns_32ns_32_7_max_dsp_1.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute_peak_compute_Pipeline_compute.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute_peak_compute_Pipeline_load_seeds.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/verilog/peak_compute.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/ip/peak_compute_fadd_32ns_32ns_32_8_no_dsp_1_ip.v" \
+"../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/f8fa/hdl/ip/peak_compute_fmul_32ns_32ns_32_7_max_dsp_1_ip.v" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_peak_compute_1_0/sim/pfm_dynamic_peak_compute_1_0.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_irq_const_tieoff_0/sim/pfm_dynamic_irq_const_tieoff_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xbar_0/sim/pfm_dynamic_xbar_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m01_regslice_0/sim/pfm_dynamic_m01_regslice_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m02_regslice_0/sim/pfm_dynamic_m02_regslice_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_0/sim/pfm_dynamic_auto_cc_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_dynamic/sim/pfm_dynamic_sci_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_kernel2_clk_0/sim/pfm_top_kernel2_clk_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_kernel_clk_0/sim/pfm_top_kernel_clk_0.v" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_dma_pcie_clk_0/sim/pfm_top_dma_pcie_clk_0.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_embedded_schedular_0/sim/pfm_top_embedded_schedular_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_smartconnect_0_0/sim/pfm_top_smartconnect_0_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_axi_vip_0_0/sim/pfm_top_axi_vip_0_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_sim_address_0_0/sim/pfm_top_sim_address_0_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_sim_qdma_0_0/sim/pfm_top_sim_qdma_0_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_top/sim/pfm_top.v" \
+
+sv xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.ip_user_files/bd/pfm_top/sim/pfm_top_sci_stub.sv" \
+"../../../../prj.ip_user_files/bd/pfm_top/ip/pfm_top_xbar_0/sim/pfm_top_xbar_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.gen/sources_1/bd/pfm_dynamic/ipshared/ec67/hdl" --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../prj.srcs/sources_1/imports/hdl/pfm_top_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
