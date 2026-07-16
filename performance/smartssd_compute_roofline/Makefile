@@ -11,7 +11,7 @@ CXX ?= g++
 
 PLATFORM_ID := $(basename $(notdir $(PLATFORM)))
 sanitize = $(subst /,_,$(subst :,_,$(subst [,_,$(subst ],_,$(1)))))
-CONFIG_ID := l$(LANES).m$(call sanitize,$(MEM_TAG)).f$(FREQ_MHZ).regout
+CONFIG_ID := l$(LANES).m$(call sanitize,$(MEM_TAG)).f$(FREQ_MHZ).frp
 TEMP_DIR := _x.$(TARGET).$(PLATFORM_ID).$(CONFIG_ID)
 BUILD_DIR := build_dir.$(TARGET).$(PLATFORM_ID).$(CONFIG_ID)
 PACKAGE_DIR := package.$(TARGET).$(PLATFORM_ID).$(CONFIG_ID)

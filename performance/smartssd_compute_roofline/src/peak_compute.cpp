@@ -80,7 +80,10 @@ load_seeds:
 
 compute:
     for (uint32_t iter = 0; iter < iterations; ++iter) {
-#pragma HLS PIPELINE II = 1
+// A free-running pipeline has no global stall/clock-enable network.  With 320
+// unrolled lanes the default stallable pipeline generated a 7360-fanout CE net,
+// which was the routed 300 MHz critical path on the SmartSSD platform.
+#pragma HLS PIPELINE II = 1 style = frp
     compute_lanes:
         for (int lane = 0; lane < LANES; ++lane) {
 #pragma HLS UNROLL
