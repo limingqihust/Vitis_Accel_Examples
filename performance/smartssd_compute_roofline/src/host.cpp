@@ -19,6 +19,14 @@
 #define LANES 320
 #endif
 
+#ifndef GROUP_LANES
+#define GROUP_LANES 16
+#endif
+
+#ifndef DSP_ADD_GROUPS
+#define DSP_ADD_GROUPS 8
+#endif
+
 #ifndef KERNEL_CLOCK_MHZ
 #define KERNEL_CLOCK_MHZ 300
 #endif
@@ -159,6 +167,9 @@ int main(int argc, char** argv) {
         std::cout << "SmartSSD FPGA peak-compute benchmark\n"
                   << "  device             : " << options.device << '\n'
                   << "  LANES              : " << LANES << '\n'
+                  << "  group lanes        : " << GROUP_LANES << '\n'
+                  << "  DSP-add lanes      : " << DSP_ADD_GROUPS * GROUP_LANES
+                  << '\n'
                   << "  target clock       : " << KERNEL_CLOCK_MHZ << " MHz\n"
                   << "  timed iterations   : " << options.iterations << '\n'
                   << "  repeats            : " << options.repeats << '\n';

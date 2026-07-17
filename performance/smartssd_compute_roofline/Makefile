@@ -3,15 +3,20 @@ SHELL := /bin/bash
 PLATFORM ?= xilinx_u2_gen3x4_xdma_gc_2_202110_1
 TARGET ?= hw
 LANES ?= 320
+GROUP_LANES ?= 16
+DSP_ADD_GROUPS ?= 8
 MEM_TAG ?= bank0
 FREQ_MHZ ?= 300
+IMPL_STRATEGIES ?=
 
 VPP ?= v++
 CXX ?= g++
 
 PLATFORM_ID := $(basename $(notdir $(PLATFORM)))
-sanitize = $(subst /,_,$(subst :,_,$(subst [,_,$(subst ],_,$(1)))))
-CONFIG_ID := l$(LANES).m$(call sanitize,$(MEM_TAG)).f$(FREQ_MHZ).frp
+_COMMA := ,
+sanitize = $(subst /,_,$(subst :,_,$(subst [,_,$(subst ],_,$(subst $(_COMMA),_,$(1))))))
+STRATEGY_TAG := $(if $(strip $(IMPL_STRATEGIES)),.s$(call sanitize,$(IMPL_STRATEGIES)))
+CONFIG_ID := l$(LANES).g$(GROUP_LANES).da$(DSP_ADD_GROUPS).m$(call sanitize,$(MEM_TAG)).f$(FREQ_MHZ)$(STRATEGY_TAG)
 TEMP_DIR := _x.$(TARGET).$(PLATFORM_ID).$(CONFIG_ID)
 BUILD_DIR := build_dir.$(TARGET).$(PLATFORM_ID).$(CONFIG_ID)
 PACKAGE_DIR := package.$(TARGET).$(PLATFORM_ID).$(CONFIG_ID)
@@ -25,13 +30,17 @@ HOST_EXE := smartssd_peak_compute
 CXXFLAGS += -O2 -g -Wall -Wextra -std=c++17
 CXXFLAGS += -I$(XILINX_XRT)/include
 CXXFLAGS += -DLANES=$(LANES)
+CXXFLAGS += -DGROUP_LANES=$(GROUP_LANES)
+CXXFLAGS += -DDSP_ADD_GROUPS=$(DSP_ADD_GROUPS)
 CXXFLAGS += -DKERNEL_CLOCK_MHZ=$(FREQ_MHZ)
 LDFLAGS += -L$(XILINX_XRT)/lib -Wl,-rpath,$(XILINX_XRT)/lib
 LDFLAGS += -pthread -lrt -luuid -lxrt_coreutil
 
 VPP_COMMON := -t $(TARGET) --platform $(PLATFORM) --save-temps
-VPP_DEFINES := -D LANES=$(LANES)
+VPP_DEFINES := -D LANES=$(LANES) -D GROUP_LANES=$(GROUP_LANES)
+VPP_DEFINES += -D DSP_ADD_GROUPS=$(DSP_ADD_GROUPS)
 VPP_CONNECTIVITY := --connectivity.nk $(KERNEL):1:$(KERNEL)_1
+VPP_IMPL_FLAGS := $(if $(strip $(IMPL_STRATEGIES)),--vivado.impl.strategies $(IMPL_STRATEGIES))
 
 .PHONY: all host build xclbin run emconfig report help clean cleanall check-env
 
@@ -50,7 +59,7 @@ $(XO): src/peak_compute.cpp Makefile | check-env
 $(LINK_XCLBIN): $(XO) Makefile
 	mkdir -p $(BUILD_DIR)
 	$(VPP) -l $(VPP_COMMON) $(VPP_FLAGS) --kernel_frequency $(FREQ_MHZ) \
-		$(VPP_CONNECTIVITY) --temp_dir $(TEMP_DIR) -o $@ $<
+		$(VPP_CONNECTIVITY) $(VPP_IMPL_FLAGS) --temp_dir $(TEMP_DIR) -o $@ $<
 
 $(XCLBIN): $(LINK_XCLBIN)
 	$(VPP) -p $(LINK_XCLBIN) $(VPP_COMMON) $(VPP_FLAGS) \
@@ -92,7 +101,7 @@ help:
 	@echo "  make run PLATFORM=xilinx_u2_gen3x4_xdma_gc_2_202110_1 LANES=320 MEM_TAG=bank0"
 	@echo "  make run ... RUN_ARGS='--iterations 200000000 --repeats 5'"
 	@echo ""
-	@echo "Tunable parameters: TARGET, LANES, MEM_TAG, FREQ_MHZ"
+	@echo "Tunable parameters: TARGET, LANES, GROUP_LANES, DSP_ADD_GROUPS, MEM_TAG, FREQ_MHZ, IMPL_STRATEGIES"
 
 clean:
 	rm -rf $(HOST_EXE) emconfig.json *.log *.jou *.csv *.run_summary .Xil
